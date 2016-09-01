@@ -1,0 +1,4 @@
+name = Mymodule
+description = Custom mdodule 
+core = 7.x
+package = Own

@@ -1,0 +1,22 @@
+<?php
+
+function mymodule_block_info() {
+  $blocks['custom'] = array('info' => t('Custom block'));
+  return $blocks;
+}
+
+global $user;
+$account = $user;
+$blocks['custom'] = array(
+  'info' => t('Custom block for @user', array('@user' => $account->name)),
+);
+
+function mymodule_block_view($delta = '') {
+  global $user;
+  $account = $user;
+  $block['content'] = t('Hello @user from IP @host',array(
+    '@user' => format_username($user), 
+    '@host' => $account->hostname
+  ));
+  return $block;
+}

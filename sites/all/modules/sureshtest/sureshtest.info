@@ -1,0 +1,7 @@
+; $Id $
+name = sureshtest
+description = about the suresh test
+core = 7.x
+
+package = "custom module"
+php = 5.2
